@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Carousel from "./components/carousel";
 
 function App() {
+  const videos = [
+    "https://i.ibb.co/ncrXc2V/1.png",
+    "https://i.ibb.co/B3s7v4h/2.png",
+    "https://i.ibb.co/XXR8kzF/3.png",
+    "https://i.ibb.co/yg7BSdM/4.png",
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="max-w-lg">
+      <Carousel autoSlide={true}>
+        {videos.map((video) => (
+          <img src={video} alt="" />
+        ))}
+      </Carousel>
     </div>
   );
 }
