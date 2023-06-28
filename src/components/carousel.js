@@ -1,97 +1,71 @@
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "react-feather";
+import { Navigation, Thumbs, FreeMode, Autoplay } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/thumbs";
+import { useState } from "react";
 
 function Carousel({ slides }) {
-  const [currentSlide, setCurrentSlide] = useState(slides[0]);
-  const [iframesLoaded, setIframesLoaded] = useState(false);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  useEffect(() => {
-    setIframesLoaded(true);
+  const sliderVideos = slides.map((videoId, index) => (
+    <SwiperSlide
+      className="flex text-center justify-center items-center"
+      key={index}
+    >
+      <iframe
+        key={index}
+        className="w-full h-[36rem] rounded-xl"
+        title="YouTube Video"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      />
+    </SwiperSlide>
+  ));
 
-    const interval = setInterval(() => {
-      const currentIndex = slides.findIndex(
-        (videoId) => videoId === currentSlide
-      );
-      const nextIndex = (currentIndex + 1) % slides.length;
-      setCurrentSlide(slides[nextIndex]);
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [slides, currentSlide]);
-
-  const handleClick = (index) => {
-    setCurrentSlide(slides[index]);
-  };
-
-  const handleNextSlide = () => {
-    const currentIndex = slides.findIndex(
-      (videoId) => videoId === currentSlide
-    );
-    const nextIndex = (currentIndex + 1) % slides.length;
-    setCurrentSlide(slides[nextIndex]);
-  };
-
-  const handlePreviousSlide = () => {
-    const currentIndex = slides.findIndex(
-      (videoId) => videoId === currentSlide
-    );
-    const previousIndex = (currentIndex - 1 + slides.length) % slides.length;
-    setCurrentSlide(slides[previousIndex]);
-  };
+  const sliderThumbnails = slides.map((videoId, index) => (
+    <SwiperSlide
+      className="flex text-center justify-center items-center"
+      key={index}
+    >
+      <img
+        className="p-0.5 rounded-xl"
+        src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+        alt={`Slide for video`}
+      />
+    </SwiperSlide>
+  ));
 
   return (
-    <div className="flex flex-col bg-red-600 w-full items-center justify-center m-5 p-5">
-      <div className="mb-7">
-        {iframesLoaded &&
-          slides.map((videoId, index) => (
-            <iframe
-              key={index}
-              title="YouTube Video"
-              src={`https://www.youtube.com/embed/${videoId}`}
-              allow="autoplay; encrypted-media"
-              height="400rem"
-              width="650rem"
-              allowFullScreen
-              className={`transition-opacity duration-300 ${
-                currentSlide === videoId ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ display: currentSlide === videoId ? "block" : "none" }}
-            />
-          ))}
-      </div>
-      <div className="flex flex-row w-full items-center justify-center">
-        <button
-          className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-          onClick={handlePreviousSlide}
-        >
-          <ChevronLeft size={40} />
-        </button>
-        {slides.map((videoId, index) => (
-          <div
-            key={index}
-            className={`h-1/4 w-1/4 m-4 rounded-xl transition-colors duration-300 ${
-              currentSlide === videoId
-                ? "border-4 border-gray-300 border-opacity-50"
-                : ""
-            }`}
-            onClick={() => handleClick(index)}
-          >
-            <img
-              className="h-full w-full"
-              src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
-              alt={`Thumbnail for video ${videoId}`}
-            />
-          </div>
-        ))}
-        <button
-          className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-          onClick={handleNextSlide}
-        >
-          <ChevronRight size={40} />
-        </button>
-      </div>
+    <div className="flex flex-col text-center justify-center items-center px-10">
+      <Swiper
+        className="w-1/2 h-4/5 m-5 mt-16"
+        spaceBetween={10}
+        navigation={true}
+        autoplay={true}
+        delay={5000}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+      >
+        {sliderVideos}
+      </Swiper>
+
+      <Swiper
+        className="w-full h-1/5 m-5"
+        spaceBetween={10}
+        slidesPerView={4}
+        freeMode={true}
+        watchSlidesProgress={true}
+        onSwiper={setThumbsSwiper}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+      >
+        {sliderThumbnails}
+      </Swiper>
     </div>
   );
 }
