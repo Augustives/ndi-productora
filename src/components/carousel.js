@@ -1,5 +1,6 @@
-import { Navigation, Thumbs, FreeMode, Autoplay } from "swiper";
+import { useState } from "react";
 
+import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -7,7 +8,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/thumbs";
-import { useState } from "react";
 
 function Carousel({ slides }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -42,9 +42,9 @@ function Carousel({ slides }) {
   ));
 
   return (
-    <div className="flex flex-col text-center justify-center items-center px-10">
+    <div className="w-9/12 py-5">
       <Swiper
-        className="w-1/2 h-4/5 m-5 mt-16"
+        className="py-6"
         spaceBetween={10}
         navigation={true}
         autoplay={true}
@@ -56,9 +56,9 @@ function Carousel({ slides }) {
       </Swiper>
 
       <Swiper
-        className="w-full h-1/5 m-5"
+        className="my-6"
         spaceBetween={10}
-        slidesPerView={4}
+        slidesPerView={"3"}
         freeMode={true}
         watchSlidesProgress={true}
         onSwiper={setThumbsSwiper}
