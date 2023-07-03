@@ -19,7 +19,7 @@ function Carousel({ slides }) {
     >
       <iframe
         key={index}
-        className="w-full h-[36rem] rounded-xl"
+        className="w-full h-[24rem] lg:h-[36rem] md:h-[30rem] sm:h-[24rem] rounded-xl"
         title="YouTube Video"
         src={`https://www.youtube.com/embed/${videoId}`}
         allow="autoplay; encrypted-media"
@@ -58,7 +58,12 @@ function Carousel({ slides }) {
       <Swiper
         className="my-6"
         spaceBetween={10}
-        slidesPerView={"3"}
+        slidesPerView={2}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         freeMode={true}
         watchSlidesProgress={true}
         onSwiper={setThumbsSwiper}
