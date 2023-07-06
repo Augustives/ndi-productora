@@ -19,7 +19,7 @@ function Carousel({ slides }) {
     >
       <iframe
         key={index}
-        className="w-full h-[24rem] lg:h-[36rem] md:h-[30rem] sm:h-[24rem] rounded-xl"
+        className="w-full h-[24rem] lg:h-[24rem] md:h-[30rem] sm:h-[24rem] rounded-xl"
         title="YouTube Video"
         src={`https://www.youtube.com/embed/${videoId}`}
         allow="autoplay; encrypted-media"

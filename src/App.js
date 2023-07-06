@@ -1,5 +1,8 @@
 import Carousel from "./components/carousel";
+import Navbar from "./components/navbar";
 import { Instagram, Youtube, Phone } from "react-feather";
+import Background from './assets/images/camera.jpg';
+import Logo from './assets/images/blanco-02.jpg';
 
 function App() {
   const videos = [
@@ -12,27 +15,18 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-300 h-screen flex flex-col">
-        <div className="bg-blue-300 flex items-center justify-between h-18 p-2">
-          <div className="ml-4">Logo</div>
-          <div className="mr-4">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
-              Button 1
-            </button>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md ml-2">
-              Button 2
-            </button>
-          </div>
+      <img className="fixed top-5 left-5 h-20 w-20 rounded-full" src={Logo} alt='Logo' title='Logo'/>     
+      <div id="home" className="bg-gray-300 h-screen flex flex-col">
+        <Navbar/>
+        <div className="min-h-screen flex items-center justify-center">
+        <img className="object-cover h-full w-full" src={Background} alt='Camera and desktop' title='Camera and desktop'/>
         </div>
-        <div className="flex flex-grow bg-blue-500  items-center justify-center">
-          Title
-        </div>
-        <div className="bg-blue-700 flex flex-row h-18 p-2">
-          <a href="https://www.instagram.com/ndiproductora?hl=es-la">
+        <div className="bg-blue-700 bg-opacity-40 flex flex-row h-18 p-2 mt-[-72px]">
+          <a href="https://www.instagram.com/ndiproductora?hl=es-la" target="_blank" >
             <Instagram className="h-auto w-14 mx-6" />
           </a>
 
-          <a href="https://www.youtube.com/@ndiproductora7060/">
+          <a href="https://www.youtube.com/@ndiproductora7060/" target="_blank" >
             <Youtube className="h-auto w-14 mr-6" />
           </a>
 
@@ -42,7 +36,7 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-gray-500 h-screen flex items-center justify-center">
+      <div id="projects" className="bg-gray-500 h-screen flex items-center justify-center">
         <Carousel slides={videos} />;
       </div>
       <div className="bg-gray-700 h-screen"></div>
