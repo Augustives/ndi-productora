@@ -42,8 +42,8 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-gray-500 h-screen flex items-center justify-center">
-        <Carousel slides={videos} />;
+      <div className="bg-gray-500 h-screen flex justify-center">
+        <Carousel slides={videos} />
       </div>
       <div className="bg-gray-700 h-screen"></div>
     </>

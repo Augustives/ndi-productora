@@ -14,12 +14,12 @@ function Carousel({ slides }) {
 
   const sliderVideos = slides.map((videoId, index) => (
     <SwiperSlide
-      className="flex text-center justify-center items-center"
+      className="flex text-center justify-center items-center h-[65%]"
       key={index}
     >
       <iframe
         key={index}
-        className="w-full h-[24rem] lg:h-[36rem] md:h-[30rem] sm:h-[24rem] rounded-xl"
+        className="w-full h-full rounded-xl"
         title="YouTube Video"
         src={`https://www.youtube.com/embed/${videoId}`}
         allow="autoplay; encrypted-media"
@@ -34,7 +34,7 @@ function Carousel({ slides }) {
       key={index}
     >
       <img
-        className="p-0.5 rounded-xl"
+        className="p-0.5 rounded-xl w-full h-full"
         src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
         alt={`Slide for video`}
       />
@@ -42,9 +42,9 @@ function Carousel({ slides }) {
   ));
 
   return (
-    <div className="w-9/12 py-5">
+    <div className="w-9/12 py-5 ">
       <Swiper
-        className="py-6"
+        className="py-6 h-[60%]"
         spaceBetween={10}
         navigation={true}
         autoplay={true}
@@ -56,7 +56,7 @@ function Carousel({ slides }) {
       </Swiper>
 
       <Swiper
-        className="my-6"
+        className="my-6 h-[30%]"
         spaceBetween={10}
         slidesPerView={2}
         breakpoints={{
