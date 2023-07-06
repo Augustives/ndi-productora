@@ -32,14 +32,11 @@ function App() {
           />
         </div>
         <div className="bg-blue-700 bg-opacity-40 flex flex-row h-18 p-2 mt-[-72px]">
-          <a
-            href="https://www.instagram.com/ndiproductora?hl=es-la"
-            target="_blank"
-          >
+          <a href="https://www.instagram.com/ndiproductora?hl=es-la">
             <Instagram className="h-auto w-14 mx-6" />
           </a>
 
-          <a href="https://www.youtube.com/@ndiproductora7060/" target="_blank">
+          <a href="https://www.youtube.com/@ndiproductora7060/">
             <Youtube className="h-auto w-14 mr-6" />
           </a>
 
