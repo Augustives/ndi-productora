@@ -1,6 +1,7 @@
 import Carousel from "./components/carousel";
 import SocialMedia from "./components/socialMedia";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 import { Instagram, Youtube, Phone } from "react-feather";
 import Background from "./assets/images/camera.jpg";
 import Logo from "./assets/images/blanco-02.jpg";
@@ -45,7 +46,9 @@ function App() {
       <div id="projects" className="bg-darkBlue h-screen flex justify-center"> 
         <Carousel slides={videos} />
       </div>
-      <div className="bg-darkBlue h-screen"></div>
+      <div id="about" className="bg-darkBlue h-screen border 1px solid red">
+      </div>
+      <Footer/>
     </>
   );
 }

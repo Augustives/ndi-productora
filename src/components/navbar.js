@@ -15,7 +15,7 @@ export default function Navbar() {
             <nav ref={navRef} className={isMenuOpen ? "responsive_nav" : ""}>
                 <a href="#home">Home</a>
                 <a href="#projects">Projects</a>
-                <a href="#">About us</a>
+                <a href="#about">About us</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
                     <X className="btn-navbar"/>
                 </button>
