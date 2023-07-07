@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import "../styles/navbar.css";
-import CloseButton from '../assets/images/close.svg';
-import MenuOpen from '../assets/images/menu.svg';
+import { Menu, X } from "react-feather";
 
 export default function Navbar() {
     const navRef = useRef();
@@ -18,11 +17,11 @@ export default function Navbar() {
                 <a href="#projects">Projects</a>
                 <a href="#">About me</a>
                 <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-                    <img className="btn-navbar" src={CloseButton} alt='Close button' title='Close button'/>
+                    <X className="btn-navbar"/>
                 </button>
             </nav>
             <button className="nav-btn" onClick={showNavbar} style={{ display: isMenuOpen ? 'none' : 'block' }}>
-                <img className="btn-navbar" src={MenuOpen} alt='Menu button' title='Menu button'/>
+                <Menu className="btn-navbar"/>
             </button>
         </header>
     );
