@@ -12,10 +12,12 @@ html {
 }
 
 :root{
-    --mainColor: #6b3232;
-    --mainColorLight: #5767aa;
-    --secondaryColor: #DB2B39;
     --textColor: #000000;
+    --darkBlue: #14213D;
+    --softBlue: #2E4163;
+    --softBlueOpacity: #2e4163b1;
+    --orange: #FCA311;
+    --white: #fff;
 }
 
 header {
@@ -33,21 +35,24 @@ header {
 
 nav a{
     margin: 0 2rem;
+    align-items: center;
     color: var(--textColor);
     text-decoration: none;
     right: 0;
     margin-top: -10px;
     font-weight: 900;
-    font-size: 23px;
+    font-size: 30px;
 }
 
 nav a:hover{
-    color: var(--secondaryColor);
+    color: var(--orange);
 }
 
 .btn-navbar {
     height: 30px;
-    margin-top: 10px;
+    margin-top: 27px;
+    transition: 1s;
+    transform: translateY(100vh) ease-in-out;
 }
 
 header .nav-btn {
@@ -57,51 +62,49 @@ header .nav-btn {
     border: none;
     outline: none;
     color: var(--textColor);
-    visibility: hidden;
-    opacity: 0;
-    font-size: 1.8rem;
+    visibility: visible;
+    opacity: 1;
+    color: var(--orange);
+    transition: 1s;
+    transform: translateY(100vh) ease-in-out;
+}
+
+header nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50%;
+    border-bottom-left-radius: 150px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color:var(--softBlueOpacity);
+    transition: 1s;
+    transform: translateY(-100vh);
+}
+
+header .responsive_nav{
+    transform: none;
+}
+
+nav .nav-close-btn {
+    position: absolute;
+    top: .9rem;
+    right: 2rem;
+    opacity: 1;
 }
 
 @media only screen and (max-width: 1012px){
-
-    header {
-        z-index: 99;
-    }
-
-    header .nav-btn{
-        visibility: visible;
-        opacity: 1;
+    nav a{
+        font-size: 1rem;
     }
 
     header nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        background-color: rgba(0, 0, 255, 0.434);
-        transition: 1s;
-        transform: translateY(-100vh);
-
+        width: 40%;
+        height: 35%;
     }
 
-    header .responsive_nav{
-        transform: none;
-    }
-
-    nav .nav-close-btn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        opacity: 1;
-    }
-
-    nav a{
-        font-size: 1.5rem;
-    }
 }
