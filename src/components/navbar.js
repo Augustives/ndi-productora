@@ -1,28 +1,30 @@
-import { useRef, useState } from "react";
-import "../styles/navbar.css";
-import { Menu, X } from "react-feather";
+import Logo from "../assets/images/blanco-02.jpg";
+import Button from "./button";
+
+import { HiMenu } from "react-icons/hi";
 
 export default function Navbar() {
-    const navRef = useRef();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  return (
+    <nav className="flex flex-row justify-between px-6 py-1 bg-gradient-to-r to-darkBlue from-softBlue shadow-custom items-center relative z-10">
+      <img
+        className="h-20 w-20 rounded-full z-50 shadow-custom m-2 p-1"
+        src={Logo}
+        alt="Logo"
+        title="Logo"
+      />
+      <div className="flex flex-row">
+        <div className="mx-2">
+          <Button text="Home" href="#home" />
+        </div>
 
-    const showNavbar = () => {
-        setIsMenuOpen(!isMenuOpen);
-    }
+        <div className="mx-2">
+          <Button text="Projects" href="#projects" />
+        </div>
 
-    return (
-        <header>
-            <nav ref={navRef} className={isMenuOpen ? "responsive_nav" : ""}>
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About us</a>
-                <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-                    <X className="btn-navbar"/>
-                </button>
-            </nav>
-            <button className="nav-btn" onClick={showNavbar} style={{ display: isMenuOpen ? 'none' : 'block' }}>
-                <Menu className="btn-navbar"/>
-            </button>
-        </header>
-    );
+        <div className="mx-2">
+          <Button text="About Us" href="#about" />
+        </div>
+      </div>
+    </nav>
+  );
 }

@@ -1,10 +1,7 @@
 import Carousel from "./components/carousel";
-import SocialMedia from "./components/socialMedia";
-import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-import { Instagram, Youtube, Phone } from "react-feather";
-import Background from "./assets/images/camera.jpg";
-import Logo from "./assets/images/blanco-02.jpg";
+import Navbar from "./components/navbar";
+import SocialMedia from "./components/socialMedia";
 
 function App() {
   const videos = [
@@ -17,38 +14,27 @@ function App() {
 
   return (
     <>
-      <img
-        className="fixed top-5 left-5 h-20 w-20 rounded-full z-50 shadow-custom"
-        src={Logo}
-        alt="Logo"
-        title="Logo"
-      />
-      <div id="home" className="bg-gray-300 h-screen flex flex-col">
+      <div
+        id="home"
+        className="h-screen flex flex-col bg-[url('./assets/images/camera.jpg')] bg-cover"
+      >
         <Navbar />
-        <div className="min-h-screen flex items-center justify-center">
-          <img
-            className="object-cover h-full w-full"
-            src={Background}
-            alt="Camera and desktop"
-            title="Camera and desktop"
-          />
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 
-                          -translate-y-1/2 text-white sm:text-4xl md:text-4xl
-                          lg:text-5xl xl:text-7xl font-bold text-center">
-              NDI PRODUCTORA
-            </div>
+        <div className="flex-grow flex items-center justify-center">
+          <div className="text-white">NDI PRODUCTORA</div>
         </div>
-        <div className="relative top-[-110px]">
-          <SocialMedia/>
+        <div className="flex-shrink-0 flex justify-start items-end">
+          <SocialMedia />
         </div>
       </div>
 
-      <div id="projects" className="bg-darkBlue h-screen flex justify-center"> 
+      <div id="projects" className="bg-darkBlue h-screen flex justify-center">
         <Carousel slides={videos} />
       </div>
-      <div id="about" className="bg-darkBlue h-screen border 1px solid red">
+
+      <div id="about" className="bg-darkBlue h-screen ">
+        <p>About</p>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
