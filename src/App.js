@@ -1,41 +1,47 @@
 import Carousel from "./components/carousel";
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbar1";
 import SocialMedia from "./components/socialMedia";
+
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
 
 function App() {
   const videos = [
-    "UZcn4OF8fKA",
-    "WaraI2chTew",
-    "t6yN_NtTU6Q",
-    "XJSOgV4VELk",
-    "6lKXFyL1uMk",
+    "KietLGcfX60",
+    "32en3uQbKEQ",
+    "j63OOIu8qww",
+    "jm4nWVLAxzk",
+    "ODCTr1MBM7w",
   ];
 
   return (
-    <>
-      <div
-        id="home"
-        className="h-screen flex flex-col bg-[url('./assets/images/camera.jpg')] bg-cover"
-      >
-        <Navbar />
-        <div className="flex-grow flex items-center justify-center">
-          <div className="text-white">NDI PRODUCTORA</div>
+    <Router>
+      <>
+        <div
+          id="home"
+          className="h-screen flex flex-col bg-[url('./assets/images/camera.jpg')] bg-cover"
+        >
+          <Navbar />
+          <div className="flex-grow flex items-center justify-center">
+            <div className="text-white">NDI PRODUCTORA</div>
+          </div>
+          <div className="flex-shrink-0 flex justify-start items-end">
+            <SocialMedia />
+          </div>
         </div>
-        <div className="flex-shrink-0 flex justify-start items-end">
-          <SocialMedia />
+
+        <div id="projects" className="bg-darkBlue h-screen flex justify-center">
+          <Carousel slides={videos} />
         </div>
-      </div>
 
-      <div id="projects" className="bg-darkBlue h-screen flex justify-center">
-        <Carousel slides={videos} />
-      </div>
-
-      <div id="about" className="bg-darkBlue h-screen ">
-        <p>About</p>
-      </div>
-      <Footer />
-    </>
+        <div id="about" className="bg-darkBlue h-screen ">
+          <p>About</p>
+        </div>
+        <Footer />
+      </>
+    </Router>
   );
 }
 
