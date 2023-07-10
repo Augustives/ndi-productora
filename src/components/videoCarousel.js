@@ -32,7 +32,7 @@ function VideoCarousel() {
 
   const sliderThumbnails = slides.map((videoId, index) => (
     <SwiperSlide
-      className="flex text-center justify-center items-center "
+      className="flex items-center justify-center text-center"
       key={index}
     >
       <img

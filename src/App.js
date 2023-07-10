@@ -63,11 +63,13 @@ function App() {
               </p>
             </div>
           </div>
+          <div
+            id="worked-with"
+            className="mt-10 px-10 lg:px-[20rem] max-w-[100vw] min-w-0 "
+          >
+            <JobsCarousel />
+          </div>
         </div>
-      </div>
-
-      <div id="worked-with" className=" mt-10 px-2">
-        <JobsCarousel />
       </div>
 
       <Footer />
