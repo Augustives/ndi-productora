@@ -30,12 +30,12 @@ export default function Navbar() {
     <header
       className="
       bg-darkBlue flex-wrap z-20 mx-auto 
-      flex items-center justify-between py-4 px-16 md:px-44
+      flex items-center justify-between py-4 px-16 lg:px-36 md:px-44
       fixed top-0 left-0 w-full border-b-8 border-orange"
     >
       <img className="h-32 w-32" src={LogoImage} alt="Logo" />
       <nav className="w-1/3 flex justify-end items-center">
-        <div className="hidden w-full items-center  justify-end xl:flex">
+        <div className="hidden w-full items-center justify-end xl:flex">
           <NavLinks />
           <div class="flex mx-6 hiddem xl:flex">
             <div class="border-r-2 border-white h-24"></div>
