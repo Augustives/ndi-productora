@@ -22,7 +22,7 @@ function App() {
               <a
                 href="h"
                 className="
-                inline-flex items-center justify-center h-12 px-10 py-0 text-xl text-center
+                inline-flex items-center justify-center h-12 px-10 py-0 text-xl text-center text-[15px] md:text-[25px]
               text-black align-middle border-2 border-white border-solid bg-white rounded-lg
                 focus:shadow-xs focus:no-underline font-custom font-extrabold tracking-[0.55em]
               "
