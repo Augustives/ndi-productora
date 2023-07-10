@@ -36,7 +36,7 @@ function VideoCarousel() {
       key={index}
     >
       <img
-        className="p-0.5 rounded-xl w-full h-full p-6"
+        className="rounded-xl w-full h-full p-6"
         src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
         alt={`Slide for video`}
       />

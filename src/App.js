@@ -6,10 +6,10 @@ import VideoCarousel from "./components/videoCarousel";
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
       <div id="home" className="h-screen flex flex-col bg-darkBlue">
-        <div className="flex flex-col h-full bg-[url('./assets/images/background_cameras.jpeg')] bg-cover">
+        <div className="flex flex-col w-full h-full bg-[url('./assets/images/background_cameras.jpeg')] bg-cover">
           <div className="flex-grow flex flex-col items-center justify-center">
             <div className="text-white text-[40px] md:text-[80px] font-custom font-bold">
               AUDIOVISUAL
@@ -35,41 +35,43 @@ function App() {
         <Triangle />
       </div>
 
-      <div id="projects" className=" h-screen flex justify-center bg-darkBlue">
+      <div
+        id="projects"
+        className="h-screen w-full flex justify-center bg-darkBlue p-6"
+      >
         <VideoCarousel />
       </div>
 
-      <div id="about" className="min-h-screen flex justify-center">
+      <div id="about" className="w-full flex justify-center py-10">
         <div className="flex flex-col items-center">
-          <div className="w-full px-4 md:w-[60rem] md:px-0">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <img
-                className="rounded-full w-32 h-32 md:w-40 md:h-40"
-                src="https://placehold.co/600x400"
-                alt="Owner of NDI"
-              />
-              <p className="mt-4 md:mt-0 md:ml-12 text-center md:text-left">
-                In hac habitasse platea dictumst. Proin laoreet fringilla felis, id
-                ullamcorper neque suscipit ac. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Aenean nec
-                pulvinar nibh. Maecenas mauris diam, fringilla et fermentum vitae,
-                faucibus vel ex. Aenean volutpat vel nisl consectetur eleifend. Nam
-                facilisis lectus at diam efficitur, ac aliquet ligula dictum. Etiam
-                est velit, pellentesque in fermentum at, mattis pretium nisi.
+          <div className="flex flex-col lg:flex-row items-center px-24 lg:px-64">
+            <img
+              className="rounded-full h-[14rem] w-[14rem] sm:h-[20rem] sm:w-[20rem] md:h-[22rem] md:w-[22rem] lg:h-[24rem] lg:w-[24rem] object-cover"
+              src="https://placehold.co/600x400"
+              alt="Owner of NDI"
+            />
+            <div className="md:ml-12">
+              <p className="my-6 overflow-hidden">
+                In hac habitasse platea dictumst. Proin laoreet fringilla felis,
+                id ullamcorper neque suscipit ac. Class aptent taciti sociosqu
+                ad litora torquent per conubia nostra, per inceptos himenaeos.
+                Aenean nec pulvinar nibh. Maecenas mauris diam, fringilla et
+                fermentum vitae, faucibus vel ex. Aenean volutpat vel nisl
+                consectetur eleifend. Nam facilisis lectus at diam efficitur, ac
+                aliquet ligula dictum. Etiam est velit, pellentesque in
+                fermentum at, mattis pretium nisi.
               </p>
-            </div>
-            <div className="w-full h-56 mt-10 text-center">
-              <p className="font-custom font-bold text-2xl md:text-5xl">
-                Worked with:
-              </p>
-              <JobsCarousel />
             </div>
           </div>
         </div>
       </div>
 
+      <div id="worked-with" className=" mt-10 px-2">
+        <JobsCarousel />
+      </div>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

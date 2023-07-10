@@ -21,15 +21,18 @@ function JobsCarousel() {
       className="flex text-center justify-center items-center"
       key={index}
     >
-      <img className="p-0.5 rounded-xl w-full h-auto" src={slide} alt={`Slide for video`} />
+      <img className="p-1 rounded-xl" src={slide} alt={`Slide for video`} />
     </SwiperSlide>
   ));
 
   return (
     <>
+      <p className="font-custom font-bold text-[30px] md:text-[60px] text-center">
+        Worked with:
+      </p>
       <Swiper
-        className="my-10"
-        spaceBetween={10}
+        className="w-[70%] mb-12"
+        spaceBetween={5}
         navigation={true}
         autoplay={true}
         delay={5000}
