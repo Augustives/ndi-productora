@@ -30,7 +30,7 @@ export default function Navbar() {
     <header
       className="
       bg-darkBlue flex-wrap z-20 mx-auto 
-      flex items-center justify-between py-4 px-16 lg:px-36 md:px-44
+      flex items-center justify-between py-4 px-16 lg:px-16 md:px-44
       fixed top-0 left-0 w-full border-b-8 border-orange"
     >
       <img className="h-32 w-32" src={LogoImage} alt="Logo" />

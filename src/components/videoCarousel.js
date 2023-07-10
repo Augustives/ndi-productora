@@ -15,12 +15,12 @@ function VideoCarousel() {
 
   const sliderVideos = slides.map((videoId, index) => (
     <SwiperSlide
-      className="flex text-center justify-center items-center h-[65%]"
+      className="flex text-center justify-center items-center h-[65%] "
       key={index}
     >
       <iframe
         key={index}
-        className="w-full h-full rounded-xl"
+        className="w-full h-full rounded-xl "
         title="YouTube Video"
         src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&version=3&playerapiid=ytplayer`}
         allow="autoplay; encrypted-media"
@@ -32,11 +32,11 @@ function VideoCarousel() {
 
   const sliderThumbnails = slides.map((videoId, index) => (
     <SwiperSlide
-      className="flex text-center justify-center items-center"
+      className="flex text-center justify-center items-center "
       key={index}
     >
       <img
-        className="p-0.5 rounded-xl w-full h-full"
+        className="p-0.5 rounded-xl w-full h-full p-6"
         src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
         alt={`Slide for video`}
       />
@@ -62,7 +62,7 @@ function VideoCarousel() {
   return (
     <div className="w-7/12 py-5">
       <Swiper
-        className="py-6 h-[60%]"
+        className="py-6 h-[60%] rounded-lg"
         spaceBetween={10}
         navigation={true}
         autoplay={true}
@@ -75,7 +75,7 @@ function VideoCarousel() {
       </Swiper>
 
       <Swiper
-        className="my-6 h-[25%]"
+        className="my-6 h-[25%] bg-darkBlue border-t-8 border-b-8 border-dotted border-orange"
         spaceBetween={10}
         slidesPerView={2}
         breakpoints={{

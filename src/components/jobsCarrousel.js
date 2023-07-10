@@ -21,14 +21,14 @@ function JobsCarousel() {
       className="flex text-center justify-center items-center"
       key={index}
     >
-      <img className="p-0.5 rounded-xl" src={slide} alt={`Slide for video`} />
+      <img className="p-0.5 rounded-xl w-full h-auto" src={slide} alt={`Slide for video`} />
     </SwiperSlide>
   ));
 
   return (
     <>
       <Swiper
-        className="my-6"
+        className="my-10"
         spaceBetween={10}
         navigation={true}
         autoplay={true}
