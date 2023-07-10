@@ -1,9 +1,8 @@
-import VideoCarousel from "./components/videoCarousel";
 import Footer from "./components/footer";
+import JobsCarousel from "./components/jobsCarrousel";
 import Navbar from "./components/navbar";
 import Triangle from "./components/triangle";
-import JobsCarousel from "./components/jobsCarrousel";
-import Button from "./components/button";
+import VideoCarousel from "./components/videoCarousel";
 
 function App() {
   return (
@@ -25,6 +24,7 @@ function App() {
                 inline-flex items-center justify-center h-12 px-10 py-0 text-xl text-center text-[15px] md:text-[25px]
               text-black align-middle border-2 border-white border-solid bg-white rounded-lg
                 focus:shadow-xs focus:no-underline font-custom font-extrabold tracking-[0.55em]
+                transition duration-500 hover:scale-110
               "
               >
                 CONTACT ME
