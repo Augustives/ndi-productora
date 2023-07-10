@@ -21,35 +21,26 @@ function JobsCarousel() {
       className="flex text-center justify-center items-center"
       key={index}
     >
-      <img
-        className="p-0.5 rounded-xl w-full h-full"
-        src={slide}
-        alt={`Slide for video`}
-      />
+      <img className="p-0.5 rounded-xl" src={slide} alt={`Slide for video`} />
     </SwiperSlide>
   ));
 
   return (
-    <div className="">
+    <>
       <Swiper
-        className="my-6 h-[30%]"
+        className="my-6"
         spaceBetween={10}
         navigation={true}
         autoplay={true}
         delay={5000}
-        slidesPerView={2}
-        breakpoints={{
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
+        slidesPerView={3}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
       >
         {sliderThumbnails}
       </Swiper>
-    </div>
+    </>
   );
 }
 

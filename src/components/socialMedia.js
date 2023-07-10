@@ -8,7 +8,7 @@ export default function SocialMedia() {
         rel="noreferrer noopener"
         target="_blank"
         href="https://www.instagram.com/ndiproductora?hl=es-la"
-        className="flex items-center justify-center hover:border-2 hover:border-0 
+        className="flex items-center justify-center hover:border-2
           border-pink-500 bg-gradient-to-b from-darkBlue to-darkBlue text-4xl hover:from-indigo-600 hover:via-pink-600 
           hover:to-yellow-500 min-w-wull hover:text-white text-white w-16 h-16  
             transform hover:-translate-y-3 rounded-full duration-500 mx-3"
@@ -22,8 +22,8 @@ export default function SocialMedia() {
         target="_blank"
         href="https://www.youtube.com/@ndiproductora/featured"
         className="flex items-center justify-center transform hover:-translate-y-3 
-        hover:border-2 w-16 h-16 rounded-full duration-500 
-        hover:border-red-500 hover:bg-red-500 
+          hover:border-2 w-16 h-16 rounded-full duration-500 
+        border-red-500 hover:bg-red-500 
         text-white text-4xl mx-3"
       >
         <FaYoutube />

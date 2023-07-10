@@ -35,25 +35,38 @@ function App() {
         <Triangle />
       </div>
 
-      <div>
-        <div id="projects" className=" h-screen flex justify-center">
-          <VideoCarousel />
-        </div>
+      <div id="projects" className=" h-screen flex justify-center">
+        <VideoCarousel />
       </div>
-      <div id="about" className="h-screen flex flex-col px-44">
-        <div className="flex flex-row justify-between">
-          <img
-            className="rounded-full"
-            src="https://placehold.co/600x400"
-            alt="Owner of NDI"
-          />
-          <p>About</p>
-        </div>
 
-        <div>
-          <JobsCarousel />
+      <div id="about" className="h-screen flex justify-center">
+        <div className="flex flex-col items-center">
+          <div className="flex justify-between items-center w-[60rem]">
+            <img
+              className="rounded-full"
+              src="https://placehold.co/600x400"
+              alt="Owner of NDI"
+            />
+            <p className="ml-12">
+              In hac habitasse platea dictumst. Proin laoreet fringilla felis,
+              id ullamcorper neque suscipit ac. Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. Aenean
+              nec pulvinar nibh. Maecenas mauris diam, fringilla et fermentum
+              vitae, faucibus vel ex. Aenean volutpat vel nisl consectetur
+              eleifend. Nam facilisis lectus at diam efficitur, ac aliquet
+              ligula dictum. Etiam est velit, pellentesque in fermentum at,
+              mattis pretium nisi.
+            </p>
+          </div>
+          <div className="w-[60rem] h-56 mt-10 text-center">
+            <p className="font-custom font-bold text-[30px] md:text-[60px]">
+              Worked with:
+            </p>
+            <JobsCarousel />
+          </div>
         </div>
       </div>
+
       <Footer />
     </>
   );
