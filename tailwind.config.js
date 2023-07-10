@@ -2,15 +2,18 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
+    fontFamily: {
+      custom: ["Barlow", "sans-serif"],
+    },
     extend: {
       colors: {
-        darkBlue: "#14213D",
+        darkBlue: "#13213C",
         softBlue: "#2E4163",
         orange: "#FCA311",
         white: "#fff",
       },
       boxShadow: {
-        custom: "6px 5px 6px #14213D, -6px -5px 6px #FCA311",
+        custom: "0px 5px 6px 3px #FCA311, 0px -5px 6px 3px #FCA311",
       },
     },
   },

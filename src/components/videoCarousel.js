@@ -8,7 +8,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/thumbs";
 
-function Carousel({ slides }) {
+function VideoCarousel() {
+  const slides = ["KietLGcfX60", "32en3uQbKEQ", "j63OOIu8qww", "ODCTr1MBM7w"];
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const playerRefs = useRef([]);
 
@@ -59,7 +60,7 @@ function Carousel({ slides }) {
   };
 
   return (
-    <div className="w-9/12 py-5">
+    <div className="w-7/12 py-5">
       <Swiper
         className="py-6 h-[60%]"
         spaceBetween={10}
@@ -74,7 +75,7 @@ function Carousel({ slides }) {
       </Swiper>
 
       <Swiper
-        className="my-6 h-[30%]"
+        className="my-6 h-[25%]"
         spaceBetween={10}
         slidesPerView={2}
         breakpoints={{
@@ -93,4 +94,4 @@ function Carousel({ slides }) {
   );
 }
 
-export default Carousel;
+export default VideoCarousel;
