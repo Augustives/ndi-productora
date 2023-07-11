@@ -20,7 +20,8 @@ function App() {
             </div>
             <div className="my-8">
               <a
-                href="https://wa.me/message/CDY5GP7JSURXD1"
+                href="https://wa.me/message/CDY5GP7JSURXD1" 
+                target="_blank"
                 className="
                 inline-flex items-center justify-center h-12 px-10 py-0 text-xl text-center text-[15px] md:text-[25px]
               text-black align-middle border-2 border-white border-solid bg-white rounded-lg
@@ -52,7 +53,7 @@ function App() {
               alt="Owner of NDI"
             />
             <div className="md:ml-12">
-              <p className="my-6 overflow-hidden font-custom text-[25px]">
+              <p className="my-6 overflow-hidden font-custom text-[20px]">
                 NDI Productora Nace como un proyecto innovador que busca la
                 excelencia y la creatividad, en todos los rubros y servicios que
                 le podemos llegar a ofrecer. Nos gusta brindar lo mejor y
