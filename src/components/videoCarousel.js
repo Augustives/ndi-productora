@@ -77,8 +77,11 @@ function VideoCarousel() {
       <Swiper
         className="my-6 h-[25%] bg-darkBlue border-t-8 border-b-8 border-dotted border-orange"
         spaceBetween={10}
-        slidesPerView={2}
+        slidesPerView={1}
         breakpoints={{
+          600: {
+            slidesPerView: 2,
+          },
           1024: {
             slidesPerView: 3,
           },
