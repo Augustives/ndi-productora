@@ -20,8 +20,9 @@ function App() {
             </div>
             <div className="my-8">
               <a
-                href="https://wa.me/message/CDY5GP7JSURXD1" 
+                href="https://wa.me/message/CDY5GP7JSURXD1"
                 target="_blank"
+                rel="noreferrer noopener"
                 className="
                 inline-flex items-center justify-center h-12 px-10 py-0 text-xl text-center text-[15px] md:text-[25px]
               text-black align-middle border-2 border-white border-solid bg-white rounded-lg
