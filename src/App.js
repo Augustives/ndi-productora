@@ -66,7 +66,7 @@ function App() {
           </div>
           <div
             id="worked-with"
-            className="mt-10 px-10 lg:px-[20rem] max-w-[100vw] min-w-0 "
+            className="mt-10 px-10 lg:px-[20rem] max-w-[95vw] min-w-0 "
           >
             <JobsCarousel />
           </div>
