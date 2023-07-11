@@ -8,13 +8,13 @@ const NavLinks = () => {
   return (
     <>
       <div className="mx-3 font-custom font-semibold">
-        <Button text="Home" href="#home" />
+        <Button text="Inicio" href="#home" />
       </div>
       <div className="mx-3 font-custom font-semibold">
-        <Button text="Projects" href="#projects" />
+        <Button text="Proyectos" href="#projects" />
       </div>
       <div className="mx-3 font-custom font-semibold">
-        <Button text="About" href="#about" />
+        <Button text="Sobre" href="#about" />
       </div>
     </>
   );

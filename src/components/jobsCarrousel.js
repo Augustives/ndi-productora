@@ -7,21 +7,22 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/thumbs";
 
+function importAll(r) {
+  return r.keys().map(r);
+}
+
 function JobsCarousel() {
-  const slides = [
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-  ];
+  const slides = importAll(
+    require.context("../assets/images/clients", false, /\.(png|jpe?g|svg)$/)
+  );
 
   const sliderThumbnails = slides.map((slide, index) => (
     <SwiperSlide
       key={index}
-      className="flex items-center justify-center text-center"
+      className="flex items-center justify-center text-center border-4 border-solid border-black"
     >
       <img
-        className="p-1 rounded-xl h-full w-full block object-cover"
+        className="p-1 rounded-xl h-full w-full "
         src={slide}
         alt={`Slide for video`}
       />
@@ -31,7 +32,7 @@ function JobsCarousel() {
   return (
     <>
       <p className="font-custom font-bold text-[30px] md:text-[40px] lg:text-[50px] text-center">
-        Worked with:
+        Trabajó con:
       </p>
       <Swiper
         className="mb-12 h-[50%]"
@@ -39,7 +40,7 @@ function JobsCarousel() {
         navigation={true}
         autoplay={true}
         delay={5000}
-        slidesPerView={"3"}
+        slidesPerView={"4"}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}

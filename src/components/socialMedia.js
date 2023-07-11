@@ -33,7 +33,7 @@ export default function SocialMedia() {
         id="whatsapp"
         rel="noreferrer noopener"
         target="_blank"
-        href="www.google.com"
+        href="https://wa.me/message/CDY5GP7JSURXD1"
         className="flex items-center justify-center duration-500 w-16 h-16 
           hover:border-2 rounded-full border-green-600 transform hover:-translate-y-3 text-4xl 
         text-white hover:bg-green-600 mx-3"
