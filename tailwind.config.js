@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./app/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     fontFamily: {
       custom: ["Barlow", "sans-serif"],
@@ -15,8 +19,10 @@ module.exports = {
       boxShadow: {
         custom: "0px 5px 6px 3px #FCA311, 0px -5px 6px 3px #FCA311",
       },
+      backgroundImage: {
+        camerasBg: "url('../public/background_cameras.jpeg')",
+      },
     },
   },
-  variants: {},
   plugins: [],
 };
