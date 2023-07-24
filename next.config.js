@@ -4,6 +4,7 @@ const nextConfig = {
     domains: ["i3.ytimg.com"],
   },
   i18n: {
+    locales: ["es"],
     defaultLocale: "es",
   },
 };
