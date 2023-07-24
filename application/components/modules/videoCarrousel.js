@@ -58,13 +58,13 @@ function VideoCarousel() {
   };
 
   return (
-    <div className="w-7/12 py-5">
+    <div className="w-full py-5 md:w-7/12">
       <Swiper
         className="h-[60%] rounded-lg py-6"
         spaceBetween={10}
         navigation={true}
         autoplay={true}
-        delay={5000}
+        delay={8000}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         onSlideChange={handleSlideChange}
