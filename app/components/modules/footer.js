@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Logo from "../../../public/blanco-02.jpg";
+import LogoSMA from "../../../public/logo-sma.png";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-darkBlue text-white">
-      <div className="container mx-auto flex items-center justify-between px-4 py-6">
+      <div className="container mx-auto flex flex-col items-center justify-between px-4 md:flex-row">
         <div className="flex items-center">
           <Image
-            className="mr-3 h-10 w-10 rounded-full"
-            src={Logo}
+            className="mr-3 h-24 w-36 rounded-full"
+            src={LogoSMA}
             alt="Logo"
           />
-          <h1 className="text-xl font-bold">NDI PRODUCTORA</h1>
         </div>
         <p className="text-sm">&copy; 2023 Todos los derechos reservados.</p>
       </div>
