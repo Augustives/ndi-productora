@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
-import LogoImage from "../../../public/LogoNDI-.png";
+import LogoImage from "../../../public/logoNDI-.png";
 import Button from "../elements/button";
 import SocialMedia from "./socialMedia";
 
