@@ -22,8 +22,7 @@ function JobsCarousel() {
         className="h-full w-full rounded-xl p-1 "
         src={slide}
         alt={`Slide for video`}
-        layout="fill"
-        objectFit="cover"
+        fill={true}
       />
     </SwiperSlide>
   ));

@@ -36,8 +36,7 @@ function VideoCarousel() {
         className="h-full w-full rounded-xl p-6"
         src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
         alt={`Slide for video`}
-        layout="fill"
-        objectFit="cover"
+        fill={true}
       />
     </SwiperSlide>
   ));
