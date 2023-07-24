@@ -7,7 +7,6 @@ function Default({ children }) {
     <>
       <Head>
         <title>NDI Productora</title>
-        <lang>es</lang>
       </Head>
       <div>
         <Header />
