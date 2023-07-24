@@ -10,7 +10,7 @@ function importAll(r) {
 
 function JobsCarousel() {
   const slides = importAll(
-    require.context("../../../public/clients", false, /\.(png|jpe?g|svg)$/),
+    require.context("../../../public/clients", false, /\.(png|jpg|svg)$/),
   );
 
   const sliderThumbnails = slides.map((slide, index) => (
