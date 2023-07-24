@@ -1,4 +1,4 @@
-import "../app/globals.css";
+import "../application/globals.css";
 
 import "swiper/css";
 import "swiper/css/navigation";

@@ -1,5 +1,5 @@
-import DefaultLayout from "../app/components/layouts/default.js";
-import HomePage from "../app/components/templates/home.js";
+import DefaultLayout from "../application/components/layouts/default.js";
+import HomePage from "../application/components/templates/home.js";
 
 const App = () => (
   <DefaultLayout>
