@@ -2,28 +2,53 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
+import { LuYoutube } from "react-icons/lu";
+
 import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 function VideoCarousel() {
   const slides = ["KietLGcfX60", "32en3uQbKEQ", "j63OOIu8qww", "ODCTr1MBM7w"];
+  const [activeSlide, setActiveSlide] = useState(null);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const playerRefs = useRef([]);
 
   const sliderVideos = slides.map((videoId, index) => (
     <SwiperSlide
-      className="flex h-[65%] items-center justify-center text-center "
+      className="relative flex items-center justify-center text-center"
       key={index}
     >
-      <iframe
+      <Image
         key={index}
-        className="h-full w-full rounded-xl "
-        title="YouTube Video"
-        src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&version=3&playerapiid=ytplayer`}
-        allow="autoplay; encrypted-media"
-        allowFullScreen
+        className={`h-full w-full rounded-xl ${
+          activeSlide === index ? "hidden" : "block"
+        }`}
+        src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+        alt={`Slide for video`}
+        fill={true}
         ref={(el) => (playerRefs.current[index] = el)}
       />
+
+      {activeSlide !== index && (
+        <div
+          onClick={() => setActiveSlide(index)}
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer text-white"
+        >
+          <LuYoutube className="border-solid-white h-20 w-20 rounded-full border-4 bg-darkBlue p-4" />
+        </div>
+      )}
+
+      {activeSlide === index && (
+        <iframe
+          key={index}
+          className="h-full w-full rounded-xl"
+          title="YouTube Video"
+          src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&version=3&playerapiid=ytplayer`}
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          ref={(el) => (playerRefs.current[index] = el)}
+        />
+      )}
     </SwiperSlide>
   ));
 
@@ -66,7 +91,7 @@ function VideoCarousel() {
         autoplay={true}
         delay={8000}
         thumbs={{ swiper: thumbsSwiper }}
-        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+        modules={[Navigation, Thumbs, FreeMode, Autoplay]}
         onSlideChange={handleSlideChange}
       >
         {sliderVideos}

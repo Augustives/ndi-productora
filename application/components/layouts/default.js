@@ -1,13 +1,20 @@
-import Header from "../modules/header";
 import Footer from "../modules/footer";
+import Header from "../modules/header";
+import Head from "next/head";
 
 function Default({ children }) {
   return (
-    <div>
-      <Header />
-      {children}
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <title>NDI Productora</title>
+        <lang>es</lang>
+      </Head>
+      <div>
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    </>
   );
 }
 

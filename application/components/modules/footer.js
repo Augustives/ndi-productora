@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../../public/blanco-02.jpg";
 import LogoSMA from "../../../public/logo-sma.png";
 
 const Footer = () => {
