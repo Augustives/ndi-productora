@@ -27,9 +27,9 @@ const YouTubeVideo: React.FC<VideoProps> = ({ id }) => {
           className="group relative h-full w-full"
         >
           <Image
-            src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+            src={`https://i3.ytimg.com/vi/${id}/maxresdefault.jpg`}
             alt="Youtube video thumbnail"
-            layout="fill"
+            fill={true}
             className="h-full w-full object-fill rounded-lg select-none"
           />
           <div className="relative grid place-items-center text-xl text-white opacity-90">

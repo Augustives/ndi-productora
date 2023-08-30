@@ -5,9 +5,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
 
-import LogoImage from "@public/logo-ndi.png";
-import Button from "@components/elements/button";
-import SocialMedia from "@components/modules/socialMedia";
+import LogoImage from "public/logo-ndi.png";
+import Button from "app/components/elements/button";
+import SocialMedia from "app/components/modules/socialMedia";
 
 const NavLinks: React.FC = () => {
   return (

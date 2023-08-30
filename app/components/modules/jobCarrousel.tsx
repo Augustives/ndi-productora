@@ -1,6 +1,6 @@
 "use client";
 
-import * as images from "@/public/clients";
+import * as images from "public/clients";
 import Image from "next/image";
 
 import "swiper/css";

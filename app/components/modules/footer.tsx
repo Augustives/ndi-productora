@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoSMA from "@public/logo-sma.png";
+import LogoSMA from "public/logo-sma.png";
 
 const Footer: React.FC = () => {
   return (

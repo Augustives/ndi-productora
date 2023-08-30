@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import Triangle from "@components/elements/triangle";
-import VideoCarousel from "@components/modules/videoCarrousel";
-import JobsCarousel from "@/app/components/modules/jobCarrousel";
-import ProfilePic from "@public/profile.jpg";
+import Triangle from "app/components/elements/triangle";
+import VideoCarousel from "app/components/modules/videoCarrousel";
+import JobsCarousel from "app/components/modules/jobCarrousel";
+import ProfilePic from "public/profile.jpg";
 
 export default function Home() {
   return (

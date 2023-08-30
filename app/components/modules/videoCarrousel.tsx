@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-import YouTubeVideo from "@components/elements/youtubeVideo";
+import YouTubeVideo from "app/components/elements/youtubeVideo";
 
 const VideoCarousel: React.FC = () => {
   const videosIds = [

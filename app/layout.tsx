@@ -3,8 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 
-import Header from "@components/modules/header";
-import Footer from "@components/modules/footer";
+import Header from "app/components/modules/header";
+import Footer from "app/components/modules/footer";
 
 const inter = Barlow({ weight: "400", subsets: ["latin"] });
 
