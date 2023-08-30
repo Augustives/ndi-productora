@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["i3.ytimg.com"],
-  },
-  i18n: {
-    locales: ["es"],
-    defaultLocale: "es",
+    domains: ["i3.ytimg.com", "img.youtube.com"],
   },
 };
 

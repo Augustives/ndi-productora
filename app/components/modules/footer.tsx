@@ -1,7 +1,7 @@
 import Image from "next/image";
-import LogoSMA from "../../../public/logo-sma.png";
+import LogoSMA from "@public/logo-sma.png";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-darkBlue text-white">
       <div className="container mx-auto flex flex-col items-center justify-between px-4 md:flex-row">

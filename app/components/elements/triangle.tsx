@@ -1,4 +1,4 @@
-export default function Triangle() {
+const Triangle: React.FC = () => {
   return (
     <div className="flex items-center justify-center">
       <div
@@ -12,4 +12,6 @@ export default function Triangle() {
       ></div>
     </div>
   );
-}
+};
+
+export default Triangle;

@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
+
 import { useState } from "react";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
-import LogoImage from "../../../public/logoNDI-.png";
-import Button from "../elements/button";
-import SocialMedia from "./socialMedia";
 
-const NavLinks = () => {
+import LogoImage from "@public/logoNDI.png";
+import Button from "@components/elements/button";
+import SocialMedia from "@components/modules/socialMedia";
+
+const NavLinks: React.FC = () => {
   return (
     <>
       <div className="mx-3 font-custom font-semibold">
@@ -23,12 +25,13 @@ const NavLinks = () => {
   );
 };
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
+
   return (
     <header
       className="
@@ -63,4 +66,6 @@ export default function Navbar() {
       )}
     </header>
   );
-}
+};
+
+export default Navbar;
