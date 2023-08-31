@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { LuYoutube } from "react-icons/lu";
 
-interface VideoProps {
+type VideoProps = {
   id: string;
-}
+};
 
 const YouTubeVideo: React.FC<VideoProps> = ({ id }) => {
   const [showVideo, setShowVideo] = useState(false);

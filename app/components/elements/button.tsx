@@ -1,7 +1,7 @@
-interface ButtonProps {
+type ButtonProps = {
   text: string;
   href: string;
-}
+};
 
 const Button: React.FC<ButtonProps> = ({ text, href }) => {
   return (
