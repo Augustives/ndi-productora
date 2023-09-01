@@ -37,23 +37,23 @@ const Navbar: React.FC = () => {
       className="
       fixed left-0 top-0 z-20 
       mx-auto flex w-full flex-wrap items-center justify-between border-b-8
-      border-orange bg-darkBlue px-16 py-4 md:px-44 lg:px-16"
+      border-orange bg-darkBlue px-16  md:px-44 lg:px-16"
     >
-      <Image className="h-32 w-32" src={LogoImage} alt="Logo" />
+      <Image className="h-24 w-24" src={LogoImage} alt="Logo" />
       <nav className="flex w-1/3 items-center justify-end">
         <div className="hidden w-full items-center justify-end xl:flex">
           <NavLinks />
-          <div className="hiddem mx-6 flex xl:flex">
-            <div className="h-24 border-r-2 border-white"></div>
+          <div className="hiddem mx-6 flex items-center">
+            <div className="h-14 border-r-2 border-white"></div>
             <SocialMedia />
           </div>
         </div>
         <div className="xl:hidden">
           <button onClick={toggleNavbar}>
             {isOpen ? (
-              <HiOutlineX className="h-24 w-24 text-orange" />
+              <HiOutlineX className="h-16 w-16 text-orange" />
             ) : (
-              <HiMenu className="h-24 w-24 text-orange" />
+              <HiMenu className="h-16 w-16 text-orange" />
             )}
           </button>
         </div>
