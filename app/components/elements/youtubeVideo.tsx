@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 import { useState } from "react";
-import { LuYoutube } from "react-icons/lu";
+import { FaYoutube } from "react-icons/fa";
 
-interface VideoProps {
+type VideoProps = {
   id: string;
-}
+};
 
 const YouTubeVideo: React.FC<VideoProps> = ({ id }) => {
   const [showVideo, setShowVideo] = useState(false);
@@ -33,7 +33,7 @@ const YouTubeVideo: React.FC<VideoProps> = ({ id }) => {
             className="h-full w-full object-fill rounded-lg select-none"
           />
           <div className="relative grid place-items-center text-xl text-white opacity-90">
-            <LuYoutube className="h-20 w-20 rounded-full border-2 border-black bg-red-600 p-4" />
+            <FaYoutube className="h-20 w-20 rounded-full border-2 border-black bg-red-600 p-4" />
           </div>
         </button>
       )}

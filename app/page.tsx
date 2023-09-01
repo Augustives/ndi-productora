@@ -51,16 +51,22 @@ export default function Home() {
         id="about"
         className="flex flex-col h-[100vh] content-center justify-center"
       >
-        <div className="flex flex-col h-[75%] items-center px-24 xl:flex-row lg:px-64 content-center justify-center">
+        <div className="flex flex-col items-center py-8 px-24 xl:flex-row lg:px-64 content-center justify-center">
           <Image
             className="
-            h-[14rem] w-[14rem] rounded-full object-cover shadow-custom
-            sm:h-[20rem] sm:w-[20rem] md:h-[22rem] md:w-[22rem] lg:h-[24rem] lg:w-[24rem]"
+            h-[12rem] w-[12rem] rounded-full object-cover shadow-custom
+            sm:h-[18rem] sm:w-[18rem] md:h-[20rem] md:w-[20rem] lg:h-[22rem] lg:w-[22rem]"
             src={ProfilePic}
             alt="Owner of NDI"
           />
           <div className="md:ml-12">
-            <p className="my-6  font-custom text-[0.8rem] md:text-[1rem] lg:text-[1.4rem]">
+            <p
+              className="
+              mt-6 lg:m-6 font-custom text-justify leading-normal text-xs 
+              sm:text-sm md:text-[1.3rem] lg:text-[1.2rem] xl-[2rem]
+              sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 
+            "
+            >
               NDI Productora Nace como un proyecto innovador que busca la
               excelencia y la creatividad, en todos los rubros y servicios que
               le podemos llegar a ofrecer. Nos gusta brindar lo mejor y siempre
@@ -71,7 +77,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="h-[25%] mx-12 pb-8">
+        <div className="px-24 md:px-28 md:py-6 mb-4">
           <JobsCarousel />
         </div>
       </div>

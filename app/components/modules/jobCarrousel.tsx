@@ -16,7 +16,7 @@ const JobsCarousel: React.FC = () => {
       className="flex items-center justify-center border-4 border-solid border-black text-center"
     >
       <Image
-        className="h-full w-full rounded-xl p-1 aspect-square"
+        className="w-full h-full rounded-xl p-1"
         src={slide}
         alt={`Slide for video`}
         fill={true}
@@ -25,14 +25,18 @@ const JobsCarousel: React.FC = () => {
   ));
 
   return (
-    <div className="flex flex-row h-full justify-center items-center content-center">
+    <div className="flex flex-row justify-center items-center content-center">
       <Swiper
-        className="h-full w-full aspect-square"
+        className="h-28 md:h-44 lg:h-64"
         navigation={true}
+        loop={true}
         modules={[Navigation]}
         spaceBetween={50}
         slidesPerView={1}
         breakpoints={{
+          450: {
+            slidesPerView: 2,
+          },
           768: {
             slidesPerView: 2,
           },
