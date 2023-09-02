@@ -27,7 +27,7 @@ const JobsCarousel: React.FC = () => {
   return (
     <div className="flex flex-row justify-center items-center content-center">
       <Swiper
-        className="h-28 md:h-44 lg:h-64"
+        className="h-40 lg:w-[75%]"
         navigation={true}
         loop={true}
         modules={[Navigation]}

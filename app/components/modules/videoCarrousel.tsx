@@ -23,7 +23,7 @@ const VideoCarousel: React.FC = () => {
   ));
 
   return (
-    <div className="flex flex-row h-[65%] justify-center content-center border-b-8 border-t-8 border-dotted border-orange py-6 mx-10">
+    <div className="flex flex-row h-[50%] md:h-[65%] justify-center content-center border-b-8 border-t-8 border-dotted border-orange py-6 mx-10">
       <Swiper
         className="h-full w-full aspect-square"
         navigation={true}

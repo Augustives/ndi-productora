@@ -54,16 +54,16 @@ export default function Home() {
         <div className="flex flex-col items-center py-8 px-24 xl:flex-row lg:px-64 content-center justify-center">
           <Image
             className="
-            h-[12rem] w-[12rem] rounded-full object-cover shadow-custom
-            sm:h-[18rem] sm:w-[18rem] md:h-[20rem] md:w-[20rem] lg:h-[22rem] lg:w-[22rem]"
+            h-[14rem] w-[14rem] rounded-full object-cover shadow-custom
+            sm:h-[16rem] sm:w-[16rem] md:w-[18rem] md:h-[18rem] lg:h-[20rem] lg:w-[20rem]"
             src={ProfilePic}
             alt="Owner of NDI"
           />
           <div className="md:ml-12">
             <p
               className="
-              mt-6 lg:m-6 font-custom text-justify leading-normal text-xs 
-              sm:text-sm md:text-[1.3rem] lg:text-[1.2rem] xl-[2rem]
+              mt-6 lg:m-6 font-custom text-justify leading-normal text-[0.6rem] 
+              sm:text-[1rem] md:text-[1.3rem] lg:text-[1rem] xl:text-[1.4rem]
               sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 
             "
             >
