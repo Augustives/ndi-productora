@@ -11,17 +11,17 @@ import SocialMedia from "app/components/modules/socialMedia";
 
 const NavLinks: React.FC = () => {
   return (
-    <>
-      <div className="mx-3 font-custom font-semibold">
+    <ul>
+      <li className="mx-3 font-custom font-semibold">
         <Button text="Inicio" href="#home" />
-      </div>
-      <div className="mx-3 font-custom font-semibold">
+      </li>
+      <li className="mx-3 font-custom font-semibold">
         <Button text="Proyectos" href="#projects" />
-      </div>
-      <div className="mx-3 font-custom font-semibold">
+      </li>
+      <li className="mx-3 font-custom font-semibold">
         <Button text="Sobre" href="#about" />
-      </div>
-    </>
+      </li>
+    </ul>
   );
 };
 
