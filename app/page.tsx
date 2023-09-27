@@ -55,15 +55,15 @@ export default function Home() {
           <Image
             className="
             h-[14rem] w-[14rem] rounded-full object-cover shadow-custom
-            sm:h-[16rem] sm:w-[16rem] md:w-[18rem] md:h-[18rem] lg:h-[20rem] lg:w-[20rem]"
+            sm:h-[15rem] sm:w-[15rem] md:w-[16rem] md:h-[16rem] lg:h-[18rem] lg:w-[18rem]"
             src={ProfilePic}
             alt="Owner of NDI"
           />
           <div className="md:ml-12">
             <p
               className="
-              mt-6 lg:m-6 font-custom text-justify leading-normal text-[0.6rem] 
-              sm:text-[1rem] md:text-[1.3rem] lg:text-[1rem] xl:text-[1.4rem]
+              mt-6 lg:m-6 font-custom text-justify leading-normal text-[0.9rem] 
+               lg:text-[1rem] xl:text-[1.2rem]
               sm:leading-normal md:leading-normal lg:leading-normal xl:leading-normal 
             "
             >
